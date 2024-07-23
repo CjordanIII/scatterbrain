@@ -2,7 +2,7 @@ import Moveable from "../components/moveable/Moveable";
 
 const Main = () => {
   return (
-    <div className="overflow-hidden">
+    <div>
       <Moveable />
     </div>
   );
