@@ -18,28 +18,29 @@ export const Profile = () => {
   );
 };
 
-export const Settings = () => {
+export const Lines = () => {
   return (
     <button
       type="button"
       className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border-t border-b border-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
     >
       <svg
-        className="w-3 h-3 me-2"
+        className="w-6 h-6 text-gray-800 dark:text-white"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
         fill="none"
-        viewBox="0 0 20 20"
+        viewBox="0 0 24 24"
       >
         <path
           stroke="currentColor"
           strokeLinecap="round"
-          strokeLinejoin="round"
           strokeWidth="2"
-          d="M4 12.25V1m0 11.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M4 19v-2.25m6-13.5V1m0 2.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M10 19V7.75m6 4.5V1m0 11.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM16 19v-2"
+          d="M5 7h14M5 12h14M5 17h14"
         />
       </svg>
-      Settings
+      Line
     </button>
   );
 };

@@ -1,14 +1,10 @@
-import {
-  Downloads,
-  Profile,
-  Settings,
-} from "../../constraints/settingsNavBtns";
+import { Downloads, Lines, Profile } from "../../constraints/settingsNavBtns";
 
 const Options = () => {
   return (
     <div className="inline-flex rounded-md shadow-sm " role="group">
       <Profile />
-      <Settings />
+      <Lines />
       <Downloads />
     </div>
   );

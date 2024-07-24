@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import Moveable from "../components/moveable/Moveable.jsx";
 import NavBar from "../components/navbar/NavBar";
-import { squareCount } from "../constraints/amount.js";
+import { squareCount } from "../utils/amount.js";
 export const CountContext = createContext();
 const Main = () => {
   // count
