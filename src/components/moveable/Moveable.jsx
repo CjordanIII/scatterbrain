@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { CountContext } from "../../pages/Main";
 import Square from "./Square";
-
 const Moveable = () => {
   // drag tracker
+  const [count, setCount, setSquareTracker] = useContext(CountContext);
   const onDragSquare = (event, info) => {
-    console.log(info.point.x, info.point.y);
+    setSquareTracker([info.point.x, info.point.y]);
   };
   const squareTracker = (event, info) => {
     console.log(info.point.x, info.point.y);
