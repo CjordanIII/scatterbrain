@@ -2,10 +2,10 @@
 import { motion } from "framer-motion";
 import Square from "./Square";
 
-const Moveable = ({ i }) => {
+const Moveable = () => {
   return (
     <motion.div
-      className={`w-0 h-0 z-${i} m-0`}
+      className="w-0 h-0  m-0"
       drag
       initial={{
         x: 0,

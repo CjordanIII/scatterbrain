@@ -1,23 +1,22 @@
+import { useState } from "react";
 import Moveable from "../components/moveable/Moveable.jsx";
 import NavBar from "../components/navbar/NavBar";
 import { squareCount } from "../constraints/amount.js";
 
 const Main = () => {
   // Assuming squareCount(5) has some necessary side effect or future use
-  let square = squareCount(5);
+  const [count, setCount] = useState(0);
+  let square = squareCount(count);
 
-  let components = []; // Correct spelling to `components`
+  let components = [];
 
-  // Loop 5 times to create 5 Moveable components
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i <= square.length; i++) {
     components.push(<Moveable key={i} num={i} />);
   }
 
-  console.log(components); // Log the components array for debugging
-
   return (
     <div className="bg-lines bg-dots">
-      <NavBar />
+      <NavBar setCount={setCount} count={count} />
       {components.map((component) => component)}
     </div>
   );

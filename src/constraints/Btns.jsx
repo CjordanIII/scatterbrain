@@ -1,5 +1,9 @@
 // eslint-disable-next-line react/prop-types
-const Btns = ({ type }) => {
+const Btns = ({ type, setCount, count }) => {
+  const addNum = () => {
+    setCount(count++);
+    console.log(count);
+  };
   if (type === "Home") {
     return (
       <>
@@ -68,6 +72,7 @@ const Btns = ({ type }) => {
           <button
             data-tooltip-target="tooltip-new"
             type="button"
+            onClick={addNum}
             className="inline-flex items-center justify-center w-10 h-10 font-medium bg-blue-600 rounded-full hover:bg-blue-700 group focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
           >
             <svg
