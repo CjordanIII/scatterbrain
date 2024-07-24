@@ -7,7 +7,7 @@ const Moveable = () => {
   const onDragSquare = (event, info) => {
     console.log(info.point.x, info.point.y);
   };
-  const clickTracker = (event, info) => {
+  const squareTracker = (event, info) => {
     console.log(info.point.x, info.point.y);
   };
   return (
@@ -15,7 +15,7 @@ const Moveable = () => {
       className="w-0 h-0 z-0 m-0"
       drag
       onDrag={onDragSquare}
-      onTapStart={clickTracker}
+      onTapStart={squareTracker}
       initial={{
         x: 0,
         y: 0,
