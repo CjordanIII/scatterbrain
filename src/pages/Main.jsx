@@ -10,7 +10,7 @@ const Main = () => {
   const [count, setCount] = useState(0);
   // range array
   let square = squareCount(count);
-  console.log(squareTracker, "main tracker");
+
   let components = [];
   // for length of itterater of arr
   for (let i = 0; i < square.length; i++) {
@@ -23,7 +23,7 @@ const Main = () => {
         <NavBar setCount={setCount} />
 
         {components.map((component) => component)}
-        <MoveableLine />
+        <MoveableLine squareTracker={squareTracker} />
       </div>
     </CountContext.Provider>
   );

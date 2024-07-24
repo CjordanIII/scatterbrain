@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import Line from "./Line";
 
-const MoveableLine = () => {
+const MoveableLine = ({ squareTracker }) => {
   //  tracker
-  function squareTracker(event, info) {
+  function lineTracker(event, info) {
     console.log(info.point.x, info.point.y);
   }
   // tap
@@ -14,7 +14,7 @@ const MoveableLine = () => {
     <motion.div
       className="w-0 h-0  m-0"
       drag
-      onDrag={squareTracker}
+      onDrag={lineTracker}
       onTapStart={onLIneStart}
       initial={{
         x: 0,
