@@ -1,9 +1,11 @@
-import { createContext, useState } from "react";
+import { createContext, useRef, useState } from "react";
+import MoveableLine from "../components/moveable/lines/line/MoveableLine.jsx";
 import Moveable from "../components/moveable/Moveable.jsx";
 import NavBar from "../components/navbar/NavBar";
 import { squareCount } from "../utils/amount.js";
 export const CountContext = createContext();
 const Main = () => {
+  const squareRef = useRef(null);
   // count
   const [count, setCount] = useState(0);
   // range array
@@ -16,10 +18,12 @@ const Main = () => {
   }
 
   return (
-    <CountContext.Provider value={[count, setCount]}>
+    <CountContext.Provider value={[count, setCount, squareRef]}>
       <div className="bg-lines bg-dots">
         <NavBar setCount={setCount} />
+
         {components.map((component) => component)}
+        <MoveableLine />
       </div>
     </CountContext.Provider>
   );

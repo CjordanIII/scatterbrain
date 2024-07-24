@@ -3,10 +3,19 @@ import { motion } from "framer-motion";
 import Square from "./Square";
 
 const Moveable = () => {
+  // drag tracker
+  const onDragSquare = (event, info) => {
+    console.log(info.point.x, info.point.y);
+  };
+  const clickTracker = (event, info) => {
+    console.log(info.point.x, info.point.y);
+  };
   return (
     <motion.div
-      className="w-0 h-0  m-0"
+      className="w-0 h-0 z-0 m-0"
       drag
+      onDrag={onDragSquare}
+      onTapStart={clickTracker}
       initial={{
         x: 0,
         y: 0,
