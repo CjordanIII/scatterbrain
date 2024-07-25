@@ -1,6 +1,8 @@
 const Line = () => {
   return (
-    <div className="h-2 m-0 bg-black border-0  dark:bg-gray-700 drop-shadow-2xl absolute rounded px-10"></div>
+    <svg width="100" height="4">
+      <line x1="0" y1="1" x2="100" y2="1" stroke="black" stroke-width="5" />
+    </svg>
   );
 };
 
