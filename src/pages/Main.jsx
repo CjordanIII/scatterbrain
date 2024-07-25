@@ -19,12 +19,12 @@ const Main = () => {
 
   return (
     <CountContext.Provider value={[count, setCount, setSquareTracker]}>
-      <div className="bg-lines bg-dots">
+      <canvas className="bg-lines -z-0 bg-dots">
         <NavBar setCount={setCount} />
 
         {components.map((component) => component)}
         <MoveableLine squareTracker={squareTracker} />
-      </div>
+      </canvas>
     </CountContext.Provider>
   );
 };

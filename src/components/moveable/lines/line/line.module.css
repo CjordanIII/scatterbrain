@@ -1,0 +1,10 @@
+
+.SVGGridline {
+    fill: navy;
+    stroke: navy;
+
+    &:hover {
+        fill: red;
+        stroke: red;
+    }
+}
